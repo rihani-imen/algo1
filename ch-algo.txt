@@ -1,0 +1,28 @@
+
+ALGORITHME Length_of_sentence
+VAR
+    phrase[] : chaîne ;
+    longueur, nombre_voyelles, nombre_mots, i : entier :=0;
+
+  COMMENCEUR
+
+    Écrire ("Entrez une phrase");
+    Lire(phrase[]);
+  TANT QUE (phrase[i] <> ".") FAIRE
+	longueur := longueur +1;
+  SI (phrase[i]= " " OU phrase[i]= ".") FAIRE
+            nombre_mots := nombre_mots+1 ;
+ 
+  ELSE_IF (phrase[i]="a" OU phrase[i]="A" OU phrase[i]="e" OU
+        phrase[i]="E" OU phrase[i]='O' OU phrase[i]="o" OU phrase[i]="I" OU phrase[i]="i" OU phrase[i]= "U" OU phrase[i]="u") ALORS
+        nombre_voyelles := nombre_voyelles+1 ;
+	
+  FIN SI  
+  je := je +1;
+END_WHILE
+
+    Write('Le nombre de mots est ', nombre_de_mots);
+     Write('Le nombre de voyelles est', nombre_voyelles);
+
+     
+FINIR
